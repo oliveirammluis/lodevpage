@@ -1,0 +1,29 @@
+/* Home.css */
+body, html, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .image-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .text-container h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
