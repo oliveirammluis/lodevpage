@@ -1,29 +1,38 @@
 /* Home.css */
-body, html, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .home-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-  }
-  
-  .image-container img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-  
-  .text-container h1 {
-    font-size: 3rem;
-    margin: 0;
-  }
-  
+body,
+html,
+#root {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-align: center;
+  gap: 40px;
+  padding: 2rem;
+}
+
+.image-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.text-container h1 {
+  font-size: x-large;
+  margin-bottom: 40px;
+}
+
+.text-container p {
+  margin-top: 1px;
+  font-size: xx-large;
+}
