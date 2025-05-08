@@ -22,22 +22,9 @@ function Home() {
   }, []);
 
   return (
-    <div
-      className="home-container"
-      style={{
-        backgroundImage: "url('/images/bg-image.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between'
-      }}
-    >
+    <div className="home-container">
       <div className="content">
-        <div className="image-container">
+        <div className="image-container mb-20">
           <img src="/images/my-photo.jpg" alt="Luis Oliveira" />
         </div>
         <div className="text-container">

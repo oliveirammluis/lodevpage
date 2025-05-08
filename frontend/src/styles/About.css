@@ -1,0 +1,183 @@
+.about-container {
+    padding: 20px;
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Faz com que o contêiner ocupe toda a altura da tela */
+    background-image: url('/public/images/bg-image.jpg'); /* Caminho correto para a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Para que a imagem fique fixa enquanto a página rola */
+    position: relative; /* Necessário para o efeito de fundo fixo */
+  }
+
+  .about-container .content {
+    max-width: 900px;
+    margin: 120px;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out, gradientTransition 12s ease-in-out infinite; /* Aumento do tempo para transição suave */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #4a90e2, #50e3c2); /* Gradiente suave inicial */
+    position: relative;
+  }
+  
+  @keyframes gradientTransition {
+    0% {
+      background: linear-gradient(145deg, #4a90e2, #50e3c2); /* Gradiente inicial */
+    }
+    50% {
+      background: linear-gradient(145deg, #50e3c2, #4a90e2); /* Gradiente invertido no meio */
+    }
+    100% {
+      background: linear-gradient(145deg, #4a90e2, #50e3c2); /* Gradiente de volta ao início */
+    }
+  }
+  
+  /* Animação de Fade-In */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .animate-marquee {
+    display: inline-block;
+    animation: marquee 40s linear infinite;
+    white-space: nowrap;
+  }
+  
+
+  .slick-prev, .slick-next {
+    font-size: 0; /* Tamanho das setas */
+    color: transparent; /* Deixar o texto invisível */
+    background: transparent; /* Remover o fundo */
+    border: none;
+    position: absolute;
+    bottom: 30px; /* Ajuste para mover as setas para baixo */
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    content: ''; /* Remove o conteúdo de texto padrão */
+    font-family: "slick"; /* Usamos a fonte padrão do Slick para as setas */
+    font-size: 30px; /* Tamanho das setas */
+    color: #fff; /* Cor das setas */
+  }
+  
+  .slick-prev {
+    left: 10px; /* Distância da seta 'previous' à esquerda */
+  }
+  
+  .slick-next {
+    right: 10px; /* Distância da seta 'next' à direita */
+  }
+  
+  
+  
+  .about-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color:#000
+  }
+  
+  .about-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #000;
+  }
+  
+  .about-description {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 24px;
+    line-height: 1.8;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  .about-description:hover {
+    color:midnightblue;
+  }
+  
+  .tech-stack {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .tech-item {
+    padding: 12px 20px;
+    background-color: #2d3748;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .tech-item:hover {
+    transform: translateY(-5px);
+    background-color: #0ef;
+    color: #1a202c;
+  }
+  
+  .slick-prev, .slick-next {
+    font-size: 0; /* Remove o texto */
+    color: transparent; /* Torna o texto invisível */
+    background: transparent; /* Remove o fundo */
+    border: none;
+    z-index: 1; /* Assegura que as setas fiquem sobre o conteúdo */
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    content: ''; /* Remove o conteúdo padrão */
+    font-family: 'slick'; /* Usamos a fonte de seta do slick */
+    font-size: 30px; /* Tamanho das setas */
+    color: #fff; /* Cor das setas */
+  }
+  
+  .slick-prev {
+    left: 10px; /* Distância da seta 'previous' à esquerda */
+  }
+  
+  .slick-next {
+    right: 10px; /* Distância da seta 'next' à direita */
+  }
+  
+  .slick-prev:before {
+    content: '←'; /* Ícone da seta esquerda */
+  }
+  
+  .slick-next:before {
+    content: '→'; /* Ícone da seta direita */
+  }
+  
+  @media (max-width: 768px) {
+    .about-title, .about-subtitle {
+      font-size: 2rem;
+    }
+  
+    .tech-item {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  }
+  
