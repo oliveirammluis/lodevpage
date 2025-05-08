@@ -1,9 +1,14 @@
 import React from 'react';
 
 const techs = [
-  'React', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Express', 'JavaScript',
-  'HTML5', 'CSS3', 'Git', 'GitHub', 'AWS', 'Vite'
-];
+    'Project Management', 'Account Management', 'Operations Management', 'Transportation Planning',
+    'CSS', 'Model View-Controller (MVC)', 'Java Database Connectivity', 'REST API', 'ES6', 
+    'Tomcat', 'Maven', 'Scrum', 'Agile Methodologies', 'Testing', 'JUnit', 'SQL', 'Git', 
+    'jQuery', 'Bootstrap (Framework)', 'JavaScript', 'HTML', 'SOAP', 'Web Applications', 
+    'Web Development', 'Programming', 'Object-Oriented Programming (OOP)', 'Spring Framework', 
+    'Spring MVC', 'Java'
+  ];
+  
 
 function TechMarquee() {
   return (

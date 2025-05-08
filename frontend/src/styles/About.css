@@ -1,45 +1,40 @@
 .about-container {
     padding: 20px;
-    display: flex; /* Flexbox para centralizar o conteúdo */
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Faz com que o contêiner ocupe toda a altura da tela */
-    background-image: url('/public/images/bg-image.jpg'); /* Caminho correto para a imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Para que a imagem fique fixa enquanto a página rola */
-    position: relative; /* Necessário para o efeito de fundo fixo */
+    align-items: center;
+    height: 100%; 
+    background-image: url('/public/images/bg-image.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    position: relative; 
   }
 
   .about-container .content {
-    max-width: 900px;
     margin: 120px;
     padding: 40px 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 1s ease-in-out, gradientTransition 12s ease-in-out infinite; /* Aumento do tempo para transição suave */
+    animation: fadeIn 1s ease-in-out, gradientTransition 12s ease-in-out infinite; 
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(145deg, #4a90e2, #50e3c2); /* Gradiente suave inicial */
+    background: linear-gradient(145deg, #4a90e2, #50e3c2); 
     position: relative;
   }
   
   @keyframes gradientTransition {
     0% {
-      background: linear-gradient(145deg, #4a90e2, #50e3c2); /* Gradiente inicial */
+      background: linear-gradient(145deg, #4a90e2, #50e3c2);
     }
     50% {
-      background: linear-gradient(145deg, #50e3c2, #4a90e2); /* Gradiente invertido no meio */
+      background: linear-gradient(145deg, #50e3c2, #4a90e2); 
     }
     100% {
-      background: linear-gradient(145deg, #4a90e2, #50e3c2); /* Gradiente de volta ao início */
+      background: linear-gradient(145deg, #4a90e2, #50e3c2);
     }
   }
   
-  /* Animação de Fade-In */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -56,59 +51,73 @@
   
   .animate-marquee {
     display: inline-block;
-    animation: marquee 40s linear infinite;
+    animation: marquee 60s linear infinite;
     white-space: nowrap;
   }
   
+.content {
+  position: relative;
+}
+.slick-slider {
+  position: relative;
+  height: 500px;
+}
+.slick-track {
+  height: 100%;
+}
 
-  .slick-prev, .slick-next {
-    font-size: 0; /* Tamanho das setas */
-    color: transparent; /* Deixar o texto invisível */
-    background: transparent; /* Remover o fundo */
-    border: none;
-    position: absolute;
-    bottom: 30px; /* Ajuste para mover as setas para baixo */
-  }
-  
-  .slick-prev:before, .slick-next:before {
-    content: ''; /* Remove o conteúdo de texto padrão */
-    font-family: "slick"; /* Usamos a fonte padrão do Slick para as setas */
-    font-size: 30px; /* Tamanho das setas */
-    color: #fff; /* Cor das setas */
-  }
-  
-  .slick-prev {
-    left: 10px; /* Distância da seta 'previous' à esquerda */
-  }
-  
-  .slick-next {
-    right: 10px; /* Distância da seta 'next' à direita */
-  }
-  
-  
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%;
+  bottom: 10px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(30, 41, 59, 0.8);
+  border-radius: 50%;
+  color: white;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  transform: translateY(-50%);
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: rgba(51, 65, 85, 1);
+}
+
+.slick-prev {
+  left: 10px;
+}
+.slick-next {
+  right: 10px;
+}
+.about-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem; /* Espaço lateral */
+  text-align: center;
+}
   
   .about-title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 20px;
-    color:#000
+    color:#000;
   }
   
   .about-subtitle {
     font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 16px;
-    color: #000;
+    margin-bottom: 1.5rem; 
   }
   
   .about-description {
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 24px;
-    line-height: 1.8;
-    color: #000;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto; 
   }
   
   .about-description:hover {
@@ -140,34 +149,60 @@
   }
   
   .slick-prev, .slick-next {
-    font-size: 0; /* Remove o texto */
-    color: transparent; /* Torna o texto invisível */
-    background: transparent; /* Remove o fundo */
+    font-size: 0; 
+    color: transparent; 
+    background: transparent;
     border: none;
-    z-index: 1; /* Assegura que as setas fiquem sobre o conteúdo */
+    z-index: 1; 
   }
   
   .slick-prev:before, .slick-next:before {
-    content: ''; /* Remove o conteúdo padrão */
-    font-family: 'slick'; /* Usamos a fonte de seta do slick */
-    font-size: 30px; /* Tamanho das setas */
-    color: #fff; /* Cor das setas */
+    content: '';
+    font-family: 'slick'; 
+    font-size: 30px; 
+    color: #fff;
   }
   
   .slick-prev {
-    left: 10px; /* Distância da seta 'previous' à esquerda */
+    left: 10px; 
   }
   
   .slick-next {
-    right: 10px; /* Distância da seta 'next' à direita */
+    right: 10px;
   }
   
   .slick-prev:before {
-    content: '←'; /* Ícone da seta esquerda */
+    content: '←'; 
   }
   
   .slick-next:before {
-    content: '→'; /* Ícone da seta direita */
+    content: '→'; 
+  }
+
+  .contact-button {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin-top: 1rem;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  }
+  
+  
+  .about-slide .contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 0;
+  }
+  
+  .contact-button:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
   }
   
   @media (max-width: 768px) {
@@ -179,5 +214,36 @@
       font-size: 1rem;
       padding: 10px 15px;
     }
+  }
+  .custom-arrow {
+    position: absolute;
+    bottom: -200px;
+    z-index: 10;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .custom-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    transform: scale(1.1);
+  }
+  
+  .custom-arrow.prev {
+    left: 30%;
+  }
+  
+  .custom-arrow.next {
+    right: 30%;
   }
   

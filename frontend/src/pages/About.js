@@ -11,32 +11,33 @@ const About = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    adaptiveHeight: true, // Ajusta altura para cada slide
+    adaptiveHeight: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
+  
 
   return (
     <div className="about-container">
       <div className="content">
-        <Slider {...settings} style={{ width: '100%', height: 'auto' }}>
+        <Slider {...settings} style={{position: 'relative', width: '100%', height: 'auto' }}>
           <div className="about-slide">
             <h1 className="about-title">Who I Am</h1>
             <p className="about-description">
-              I'm Luís Oliveira, a passionate Full Stack Developer based in Portugal. I transform ideas into reality through clean and elegant code.
-            </p>
+              I'm Luís Oliveira, a Full Stack Developer based in Portugal. I completed the certified Full Stack Developer bootcamp at Code For All_ on May 2, 2025.</p>
           </div>
 
           <div className="about-slide">
             <h2 className="about-subtitle">What I Do</h2>
             <p className="about-description">
-              I build scalable and modern web applications. I’m dedicated to writing clean code, ensuring a seamless user experience, and continuously learning new technologies.
+              I write code to solve problems and bring ideas to life. Whether it's building applications, automating tasks, or exploring new technologies, I'm always looking for ways to grow as a developer.
             </p>
           </div>
-          
+
           <div className="about-slide">
             <h2 className="about-subtitle">Currently</h2>
             <p className="about-description">
-              I'm working on personal projects and freelancing, always seeking new challenges and opportunities to collaborate.
-            </p>
+              I'm focused on practicing and building projects to consolidate the knowledge and skills I've gained.            </p>
           </div>
 
           <div className="about-slide">
@@ -44,10 +45,36 @@ const About = () => {
             <p className="about-description">
               If you're working on something exciting or just want to chat about tech — feel free to reach out!
             </p>
+            <a href="/book" className="contact-button">Book a call</a>
           </div>
+
         </Slider>
-        </div>
-        <TechMarquee />
+      </div>
+      <TechMarquee />
+    </div>
+  );
+};
+
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div
+      className="custom-arrow next"
+      onClick={onClick}
+    >
+      ❯
+    </div>
+  );
+};
+
+const PrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div
+      className="custom-arrow prev"
+      onClick={onClick}
+    >
+      ❮
     </div>
   );
 };
