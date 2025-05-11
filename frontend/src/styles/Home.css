@@ -1,4 +1,4 @@
-/* Definir a fonte padrão */
+
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -9,12 +9,13 @@
 html, body {
   height: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
+  overscroll-behavior: none;
 }
 
-/* Contêiner principal da home */
+
 .home-container {
-  background-image: url('/public/images/bg-image.jpg'); /* Aqui estamos a apontar para a pasta public */
+  background-image: url('/public/images/bg-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,20 +24,19 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center; /* Garante que o conteúdo fica centrado */
+  align-items: center; 
 }
 
-/* Contêiner para o conteúdo */
+
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center; /* Centraliza o texto */
+  text-align: center; 
 }
 
-/* Estilo para a imagem de perfil */
 .image-container {
   padding-top: 120px;
 }
@@ -48,21 +48,19 @@ html, body {
   margin-bottom: 20px;
 }
 
-/* Estilo para o texto */
 .text-container h1 {
-  font-size: 3rem; /* Aumenta o tamanho da fonte para mais destaque */
+  font-size: 3rem; 
   color: white;
   margin-bottom: 40px;
 }
 
 .text-container p {
-  font-size: 1.5rem; /* Tamanho de fonte um pouco maior */
+  font-size: 1.5rem; 
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra no texto para dar contraste */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   margin-top: 10px;
 }
 
-/* Estilos de animação de transição para o texto */
 .animate-pulse {
   animation: pulse 2s infinite;
 }
@@ -79,7 +77,6 @@ html, body {
   }
 }
 
-/* Footer */
 footer {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);

@@ -2,8 +2,6 @@
 
 **LoDevPage** is a personal developer portfolio built with React and Tailwind CSS. It includes an introduction, dynamic content, a showcase of GitHub repositories (via the GitHub API), and a blog section for formations, workshops, and projects.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## 🛠️ Tech Stack
 
 - React

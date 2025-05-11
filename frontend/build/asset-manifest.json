@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/mugiwara-dev/static/css/main.7e0eaf88.css",
+    "main.js": "/mugiwara-dev/static/js/main.c01950f3.js",
+    "static/media/bg-image.jpg": "/mugiwara-dev/static/media/bg-image.c431ea4e2e62e6609758.jpg",
+    "static/media/slick.svg": "/mugiwara-dev/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/mugiwara-dev/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/mugiwara-dev/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/mugiwara-dev/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/mugiwara-dev/index.html",
+    "main.7e0eaf88.css.map": "/mugiwara-dev/static/css/main.7e0eaf88.css.map",
+    "main.c01950f3.js.map": "/mugiwara-dev/static/js/main.c01950f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e0eaf88.css",
+    "static/js/main.c01950f3.js"
+  ]
+}
