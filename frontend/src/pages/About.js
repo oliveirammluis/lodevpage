@@ -30,8 +30,7 @@ const About = () => {
           <div className="about-slide">
             <h2 className="about-subtitle">What I Do</h2>
             <p className="about-description">
-              I write code to solve problems and bring ideas to life. Whether it's building applications, automating tasks, or exploring new technologies, I'm always looking for ways to grow as a developer.
-            </p>
+              I write code to solve problems and bring ideas to life. Whether it's building applications, automating tasks, or exploring new technologies, I'm always looking for ways to grow as a developer.</p>
           </div>
 
           <div className="about-slide">
@@ -45,7 +44,7 @@ const About = () => {
             <p className="about-description">
               If you're working on something exciting or just want to chat about tech — feel free to reach out!
             </p>
-            <a href="/book" className="contact-button">Book a call</a>
+            <a href="/book-a-call" className="contact-button">Book a call</a>
           </div>
 
         </Slider>
