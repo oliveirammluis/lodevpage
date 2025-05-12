@@ -26,15 +26,16 @@ const Work = () => {
   };
 
   return (
-    <section className="work-section">
-<h2 className="work-title text-2xl font-bold text-white flex items-center gap-2">
-  <Github size={28} className="text-[#58a6ff] hover:text-[#79c0ff] transition-colors duration-300" />
-  <span>My GitHub Projects</span>
-</h2>
-      <div className="work-grid">
+    <section className="work-section relative overflow-hidden bg-blur">
+      {/* Conteúdo principal */}
+      <h2 className="work-title text-2xl font-bold text-white flex items-center gap-2 relative z-10">
+        <Github size={28} className="text-[#58a6ff] hover:text-[#79c0ff] transition-colors duration-300" />
+        <span>My GitHub Projects</span>
+      </h2>
+      <div className="work-grid relative z-10">
         {repos.map((repo) => {
           const isFlipped = flippedCards[repo.id];
-
+  
           return (
             <div
               key={repo.id}
