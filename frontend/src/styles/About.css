@@ -16,7 +16,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   animation: fadeIn 1s ease-in-out, gradientTransition 12s ease-in-out infinite;
   width: 100%;
-  margin-top: 75px;
+  margin-top: 80px;
   max-width: 750px;
   max-height: 600px;
   background: linear-gradient(145deg, #4a90e2, #50e3c2);
