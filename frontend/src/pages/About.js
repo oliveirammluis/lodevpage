@@ -22,7 +22,7 @@ const About = () => {
       <div className="content">
         <Slider {...settings} style={{position: 'relative', width: '100%', height: 'auto' }}>
           <div className="about-slide">
-            <h1 className="about-title">Who I Am</h1>
+            <h1 className="about-title">Who am I</h1>
             <p className="about-description">
               I'm Luís Oliveira, a Full Stack Developer based in Portugal. I completed the certified Full Stack Developer bootcamp at Code For All_ on May 2, 2025.</p>
           </div>
