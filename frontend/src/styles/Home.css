@@ -19,14 +19,14 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
+  background-attachment: scroll;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
+  overflow: hidden;
 }
-
 
 .content {
   flex: 1;
@@ -34,28 +34,29 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center; 
+  text-align: center;
+  padding: 1rem;
 }
 
 .image-container {
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 .image-container img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
 .text-container h1 {
-  font-size: 3rem; 
+  font-size: 2rem;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .text-container p {
-  font-size: 1.5rem; 
+  font-size: 1.2rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   margin-top: 10px;
@@ -83,4 +84,23 @@ footer {
   color: white;
   text-align: center;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .image-container img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .text-container h1 {
+    font-size: 3rem;
+  }
+
+  .text-container p {
+    font-size: 1.5rem;
+  }
+
+  .image-container {
+    padding-top: 120px;
+  }
 }
