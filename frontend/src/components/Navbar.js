@@ -9,6 +9,10 @@ function Navbar() {
     setMenuActive(!menuActive);
   };
 
+  const handleLinkClick = () => {
+    setMenuActive(false); // Fecha o menu quando um link é clicado
+  };
+
   return (
     <nav className="navbar">
       <div className={`menu-toggle ${menuActive ? 'active' : ''}`} id="menu-toggle" onClick={toggleMenu}>
@@ -18,37 +22,37 @@ function Navbar() {
       </div>
       <ul className={`nav-links ${menuActive ? 'active' : ''}`} id="nav-links">
         <li>
-          <Link to="/">
+          <Link to="/" onClick={handleLinkClick}>
             Home
             <span></span>
           </Link>
         </li>
         <li>
-          <Link to="/work">
+          <Link to="/work" onClick={handleLinkClick}>
             Work
             <span></span>
           </Link>
         </li>
         <li>
-          <Link to="/about">
+          <Link to="/about" onClick={handleLinkClick}>
             About
             <span></span>
           </Link>
         </li>
         <li>
-          <Link to="/blog">
+          <Link to="/blog" onClick={handleLinkClick}>
             Blog
             <span></span>
           </Link>
         </li>
         <li>
-          <Link to="/more">
+          <Link to="/more" onClick={handleLinkClick}>
             More
             <span></span>
           </Link>
         </li>
         <li>
-          <Link to="/book-a-call">
+          <Link to="/book-a-call" onClick={handleLinkClick}>
             Book a Call
             <span></span>
           </Link>
