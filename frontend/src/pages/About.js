@@ -12,7 +12,9 @@ const About = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false // desativamos aqui para renderizar manualmente
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000
   };
 
   const handleNext = () => {
