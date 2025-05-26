@@ -1,21 +1,54 @@
+// src/pages/Blog.js
 import React from 'react';
 import '../styles/Blog.css';
 
-const Blog = () => {
-  return (
-    <section className="blog-section blog-section--under-construction relative overflow-hidden bg-dark-gradient">
+const posts = [
+  {
+    title: 'Full Stack Web Developer Bootcamp',
+    date: 'May 2025',
+    category: 'Course',
+    description: 'An intensive bootcamp focused on React, Node.js, PostgreSQL, and best development practices.'
+  },
+  {
+    title: 'Bit By Bid',
+    date: 'April 2025',
+    category: 'Personal Project',
+    description: 'A platform for submitting RFPs built with HTML, CSS, JS, and PostgreSQL.'
+  },
+  {
+    title: 'Advanced Excel Workshop',
+    date: 'June 2020',
+    category: 'Workshop',
+    description: 'Hands-on workshop covering formulas, dashboards, and automation with VBA.'
+  },
+  {
+    title: 'Portfolio Website – mugiwara.dev',
+    date: 'May 2025',
+    category: 'Personal Project',
+    description: 'A SPA built using React, JavaScript, and Tailwind CSS to showcase projects, experience, and blog content.'
+  },
+  {
+    title: 'Metalúrgica Website',
+    date: 'May 2025',
+    category: 'Professional Project',
+    description: 'Corporate website for a metalworking company using React, TypeScript, Tailwind CSS, and Next.js, with multilingual support and Google Maps integration.'
+  }
+];
 
-      <h2 className="blog-section__title text-2xl font-bold text-white flex justify-center items-center gap-2 relative z-10">
-        <span>Blog</span>
-      </h2>
-      <div className="blog-section__construction-message relative z-10">
-        <h3 className="blog-section__construction-title text-3xl font-bold text-white">Under Construction</h3>
-        <p className="blog-section__construction-text text-lg text-white">
-          The Blog page is being prepared. Come back later for more content!
-        </p>
+function Blog() {
+  return (
+    <section className="blog-section">
+      <div className="blog-posts">
+        {posts.map((post, index) => (
+          <div key={index} className="blog-post">
+            <h3 className="post-title">{post.title}</h3>
+            <div className="post-meta">{`${post.category} · ${post.date}`}</div>
+            <p className="post-desc">{post.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
-};
+}
 
 export default Blog;

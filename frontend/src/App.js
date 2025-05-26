@@ -12,14 +12,15 @@ function Layout() {
   return (
     <>
       <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Work" element={<Work />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/More" element={<More />} />
-          <Route path="/Book-a-call" element={<BookACall />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/more" element={<More />} />
+        <Route path="/book-a-call" element={<BookACall />} />
+      </Routes>
+
     </>
   );
 }
