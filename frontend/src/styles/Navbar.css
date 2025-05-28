@@ -94,34 +94,51 @@ nav a:hover span {
 
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 10px 20px;
+      width: 100vw;
+      padding: 10px 0;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      left: 0;
+      top: 0;
+      position: fixed;
+      transform: none;
+      border-radius: 0;
+      background: rgba(0,0,0,0.8);
     }
-
+  
     .menu-toggle {
-        display: flex;
+      display: flex;
+      margin: 0 auto;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1100;
     }
-
+  
     .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.85);
-        border-radius: 20px;
-        padding: 20px;
-        position: absolute;
-        top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 20px;
+      padding: 20px;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
     }
-
+  
     .nav-links.active {
-        display: flex;
+      display: flex;
     }
-
+  
     .nav-links a {
-        padding: 10px;
+      padding: 10px;
     }
-}
+  }
+  
+  .nav-links li:nth-child(5) {
+    display: none;
+  }
+  
