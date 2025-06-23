@@ -70,28 +70,8 @@
 .post-desc {
   font-size: 1rem;
 }
-.certificate-button {
-  display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.5rem 1rem;
-  background-color: #2563eb;
-  color: white;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
 
-.certificate-button:hover {
-  background-color: #1d4ed8;
-}
-/* Fade in para cada post */
-.blog-posts {
-  display: grid;
-  gap: 1.5rem;
-  transition: all 0.3s ease;
-}
+
 
 .blog-post {
   background: rgba(255, 255, 255, 0.08);
@@ -108,29 +88,6 @@
   }
 }
 
-/* Destaque para posts com certificado */
-.blog-post.with-certificate {
-  border: 1px solid #60a5fa;
-  box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
-}
-
-/* Botão do certificado */
-.certificate-button {
-  display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.5rem 1rem;
-  background-color: #2563eb;
-  color: white;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-.certificate-button:hover {
-  background-color: #1d4ed8;
-}
 .glitch-title {
   position: relative;
   color: #0ea5e9;

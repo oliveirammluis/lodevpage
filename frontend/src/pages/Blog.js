@@ -24,7 +24,6 @@ const posts = [
         ]
       }
     ],
-    certificate: '/CodeforAll.pdf'
   },
   {
     title: 'Bit By Bid',
@@ -50,7 +49,6 @@ Frontend: HTML, CSS, JavaScript, Bootstrap, tsparticles
 Backend: Spring Boot, JSON handling, PostgreSQL  
 DevOps: Git workflow with structured branches, PRs, reviews, and blood-sweat-debug moments  
 Deployment: Manual AWS EC2 setup via terminal — old-school and proud.`,
-    projectLink: 'http://ec2-13-60-169-55.eu-north-1.compute.amazonaws.com'
   },
   {
     title: 'Advanced Excel Workshop',
@@ -81,7 +79,6 @@ Deployment: Manual AWS EC2 setup via terminal — old-school and proud.`,
       },
       'This course was crafted to skyrocket your career and sharpen your edge in data-driven decision-making.'
     ],
-    certificate: '/Udemy.pdf'
   },
   {
     title: 'Portfolio Website',
@@ -259,7 +256,7 @@ function Blog() {
           {filteredPosts.map((post, index) => (
             <div
               key={index}
-              className={`blog-post ${post.certificate ? 'with-certificate' : ''}`}
+              className="blog-post"
             >
               <h3 className="post-title">{post.title}</h3>
               <div className="post-meta">
@@ -290,28 +287,6 @@ function Blog() {
                     <p key={idx}>{line}</p>
                   ))}
                 </div>
-              )}
-
-              {post.certificate && (
-                <a
-                  href={post.certificate}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="certificate-button"
-                >
-                  View Certificate
-                </a>
-              )}
-
-              {post.projectLink && (
-                <a
-                  href={post.projectLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  Visit Project
-                </a>
               )}
             </div>
           ))}
