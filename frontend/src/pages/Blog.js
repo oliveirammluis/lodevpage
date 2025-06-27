@@ -139,7 +139,52 @@ Highlights include:
 - Modular architecture for smooth scaling and future-proof development
 
 Deployment is in progress as we test, iterate, and align final touches with client expectations.`
-  }
+  },
+  {
+    title: 'Eventure — Event Management Platform',
+    date: 'June 2025',
+    sortDate: '2025-06-20',
+    category: 'Personal Project',
+    description: `Eventure — Your Gateway to Seamless Event Management 🎟️✨
+  
+  An ongoing solo project inspired by platforms like 3cket and Ticketline, *Eventure* aims to simplify the event creation and ticketing experience for organizers and attendees alike.
+  
+  🛠️ Key Features (in development):
+  - Full CRUD interface for managing events, sessions, and ticket types
+  - Secure user authentication (admin vs. attendee roles)
+  - Dynamic ticket generation and validation
+  - Responsive, modern UI with smooth navigation and clean design
+  - Backend integration with PostgreSQL for data persistence
+  - Future integration with payment gateways and QR-based check-in
+  
+  💻 Tech Stack:
+  Frontend: React, Tailwind CSS  
+  Backend: Java (Spring Boot), PostgreSQL  
+  DevOps: GitHub, versioned workflows  
+  Deployment: Frontend hosted on Netlify, backend on Railway (free-tier friendly)
+  
+  More than a project — this is my deep dive into scalable architecture, backend mastery, and real-world problem-solving. Stay tuned! 🚧`,
+  },
+  {
+    title: 'CodeWars — Let the Kata Battles Begin',
+    date: 'June 2025',
+    sortDate: '2025-06-26',
+    category: 'Personal Project',
+    description: [
+      '🧠 Started my journey on CodeWars to keep the Java sword sharp and my brain sharper.',
+      'CodeWars offers small, focused algorithmic challenges called *katas*, each one pushing logic, syntax, and problem-solving skills to new heights.',
+      {
+        type: 'list',
+        items: [
+          '🔹 Focus: Java for now — mastering the basics and beyond',
+          '🔹 Weekly habit: 2 to 5 kata per week keeps the rust away',
+          '🔹 Future plan: Expand to JavaScript, SQL, and Python'
+        ]
+      },
+      'Why CodeWars? It gamifies coding in a way that fuels consistency and competition, while also reinforcing clean, efficient solutions.',
+      'Follow my profile (soon to be shared) and feel free to challenge me 😎 Let the grind begin.'
+    ]
+  },
 ];
 
 
