@@ -5,6 +5,57 @@ import '../styles/Blog.css';
 
 const posts = [
   {
+    title: 'Vibe Coding & The Future of Software',
+    date: 'May 2025',
+    sortDate: '2025-05-29',
+    category: 'Event',
+    description: [
+      '🧠 *Vibe Coding, AI, and strong opinions on the future of software* — Lisbon, May 29, 2025.',
+      'Three voices. One panel. Endless insights on how we code and why it matters:',
+      {
+        type: 'list',
+        items: [
+          '➡️ **Ben Joffe** on building at the speed of thought with Vibe Coding',
+          '➡️ **Renata Santos** on scaling AI and the realities of large models',
+          '➡️ **Rui Ferrão** defending the fundamentals: clean architecture and smart refactoring'
+        ]
+      },
+      '🎤 Panel: *Old School × New School* — sparked honest, heated debates:',
+      {
+        type: 'list',
+        items: [
+          '✅ Refactor or rewrite?',
+          '✅ AI-first workflows vs foundational skills',
+          '✅ Navigating a world where models write half your code'
+        ]
+      },
+      '💡 Key takeaway: *Using AI to learn faster gives you an edge. Using AI just to finish faster… not so much.*',
+      '🙌 Big shoutout to the Lisbon crowd — and the **Kernel Fried Chickens** (Mónica, Bruno, Joana, Marcelo, João, Diogo) for showing up strong with northern spirit and hunger to grow. 💪'
+    ]
+  },
+  {
+    title: 'Blip Hackathon — Code Forward: Hack Different!',
+    date: 'July 2025',
+    sortDate: '2025-07-18',
+    category: 'Event',
+    description: [
+      '🚀 Selected to join Blip’s *Code Forward: Hack Different!* Hackathon in Porto — July 18, 2025.',
+      'Team: **KernelFC**, representing the bootcamp crew with code, coffee, and controlled chaos ☕💻🔥',
+      '🧠 A full day of intense hacking, creativity, and strategy across diverse challenges — with a surprise sporty twist and a chill sunset to wrap it all up.',
+      'The hackathon was more than just a tech sprint — it was a celebration of innovation, teamwork, and pushing the limits of what can be built in one day.',
+      {
+        type: 'list',
+        items: [
+          'Invited by Blip (a Flutter Entertainment company)',
+          'Team-based challenge: 9am to 6:30pm, onsite at Blip’s HQ in Porto',
+          'Collaborative, high-energy problem solving across different domains',
+          'Sport, sunset, and surprises included 🌇🏐🎉'
+        ]
+      },
+      'More than lines of code — it was about mindset, fast prototyping, and team synergy. Grateful to have been part of it!'
+    ]
+  },  
+  {
     title: 'Full Stack Web Developer Bootcamp',
     date: 'May 2025',
     sortDate: '2025-05-02',
@@ -195,6 +246,7 @@ const getCategoryIcon = (category) => {
     case 'Personal Project': return '💡';
     case 'Professional Project': return '🌐';
     case 'Group Project': return '🤝';
+    case 'Event': return '🎉';
     default: return '📝';
   }
 };
