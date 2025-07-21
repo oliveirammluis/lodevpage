@@ -8,9 +8,9 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
-  overflow: hidden;
+  overflow: visible;   
 }
+
 
 .about-container .content {
   padding: 2rem 1rem;
@@ -20,7 +20,6 @@
   width: 100%;
   margin-top: 80px;
   max-width: 650px;
-  max-height: 500px;
   background: linear-gradient(145deg, #4a90e2, #50e3c2);
   display: flex;
   flex-direction: column;
@@ -28,16 +27,31 @@
 }
 
 .about-slide {
-  padding: 1rem 0;
+  padding: 1.5rem 1rem; 
   text-align: center;
+  min-height: 250px; /* espaço para o texto não ficar no topo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.about-title,
-.about-subtitle {
+.about-title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #000;
 }
+
+.special-subtitle {
+  color: #28a745;        
+  font-weight: 700;       
+  font-size: 1.8rem;       
+  text-align: center;      
+  margin-bottom: 10px;    
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  letter-spacing: 0.05em;  
+}
+
 
 .about-description {
   font-size: 1.1rem;
@@ -49,6 +63,7 @@
 .about-description:hover {
   color: midnightblue;
 }
+
 
 .contact-button {
   display: inline-block;
@@ -67,27 +82,34 @@
   background-color: #334155;
 }
 
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 .custom-arrow {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem 1rem 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   cursor: pointer;
-  color: white;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
   width: 48px;
   height: 48px;
   border-radius: 50%;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1;
 }
 
 .custom-arrow:hover {
   background-color: rgba(0, 0, 0, 0.85);
-  /* Remove scale */
+  transform: scale(1.2);
 }
 
 .slick-slider {
@@ -122,6 +144,93 @@
   color: #1a202c;
 }
 
+/* ==================== Tetris Styles ==================== */
+.tetris-wrapper {
+  margin-top: 60px; /* mais espaço para separar do carrossel */
+  text-align: center;
+  width: 100%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tetris-container {
+  position: relative;
+  height: 400px;
+  border: 2px solid #0f0;
+  border-radius: 10px;
+  background-color: #000;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+.falling-tech {
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  color: #0f0;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-shadow: 0 0 8px #0f0;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 1.1rem;
+}
+
+.tetris-button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tetris-button.start {
+  background-color: #0f0;
+  color: #000;
+}
+
+.tetris-button.start:hover {
+  background-color: #1aff1a;
+  box-shadow: 0 0 14px #1aff1a;
+}
+
+.tetris-button.stop {
+  background-color: #a00;
+  color: #fff;
+}
+
+.tetris-button.stop:hover {
+  background-color: #d22;
+  box-shadow: 0 0 14px #d22;
+}
+
+.tetris-controls button {
+  background-color: transparent; /* sem fundo para ficar clean */
+  border: 2px solid #28a745;     /* borda verde clara */
+  color: #28a745;                /* texto verde */
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tetris-controls button:hover {
+  background-color: #28a745;    /* fundo verde no hover */
+  color: #000;                  /* texto preto no hover pra contraste */
+}
+
+
+/* ==================== Responsive ==================== */
 @media (max-width: 768px) {
   .about-title,
   .about-subtitle {
@@ -143,8 +252,13 @@
     font-size: 1rem;
     padding: 10px 15px;
   }
+
+  .tetris-container {
+    height: 300px;
+  }
 }
 
+/* ==================== Animations ==================== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -164,22 +278,4 @@
   100% {
     background: linear-gradient(145deg, #4a90e2, #50e3c2);
   }
-}
-.arrow-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.custom-arrow {
-  font-size: 2rem;
-  cursor: pointer;
-  color: #fff;
-  z-index: 1;
-  transition: transform 0.2s ease;
-}
-
-.custom-arrow:hover {
-  transform: scale(1.2);
 }
